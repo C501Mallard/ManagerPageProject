@@ -1,0 +1,304 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ManagerPage.master.cs" Inherits="ManagerPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>食品添加物查詢管理介面</title>
+    <%--<link href="Content/bootstrap.min.css" rel="stylesheet" />--%>
+    <%-- <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/2.4.1/firebase-ui-auth__zh_tw.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.4.1/firebaseui.css" />
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDHxAbxFyUjKUF35Zzv-EVEu3QbqVeA6eQ",
+            authDomain: "rookieauth-26cea.firebaseapp.com",
+            databaseURL: "https://rookieauth-26cea.firebaseio.com",
+            projectId: "rookieauth-26cea",
+            storageBucket: "",
+            messagingSenderId: "958285283191"
+        };
+        firebase.initializeApp(config);
+    </script>--%>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet" />
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+    <style>
+    
+        
+    </style>
+
+
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0" id="navbar-head">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="ManagerHomePage.aspx" style="color: greenyellow">食品添加物查詢管理介面</a>
+            </div>
+            <!-- /.navbar-header -->
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-envelope fa-fw"></i><i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li><a href="#">
+                            <div>
+                                <strong>簡協珊</strong>
+                                <span class="pull-right text-muted"><em>Yesterday</em>
+                                </span>
+                            </div>
+                            <div>便有考我推用分學怎新開長一，地爸正，絕兒時時所治友好兒比還觀因今子上家魚能動地料在你不清及對實點外於是然、醫數象往？麼此備了話官，技開意；子情足二電到代舉開下路相水興眼廣！</div>
+                        </a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">
+                            <div>
+                                <strong>屈思妤</strong>
+                                <span class="pull-right text-muted"><em>Yesterday</em>
+                                </span>
+                            </div>
+                            <div>何覺難生功自候好直水小；半雨境！人英也現下，得體小現程知是，不象面，由去界方笑還現指他住起每她想、來海寶葉怕正著度無的？還不笑其不？解場洋民，分候我非業！天能個德意土總的！格沒能？</div>
+                        </a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">
+                            <div>
+                                <strong>童文豪</strong>
+                                <span class="pull-right text-muted"><em>Yesterday</em>
+                                </span>
+                            </div>
+                            <div>大禮來官突了也？政資級，集國中想手味思氣謝著即還教士系話媽會我，無其了是一我如，回準存片，達選個；他到前大動面大在，公也體易有的大的：有媽這該，記組黨化門環動之個，回國改外過分善教油府部力不數山大孩，重車精起找銀水無、會式這檢拿教科腦這以邊……入是助；人結心臉。著賽人意期收業委能有，母進南一很都必？</div>
+                        </a></li>
+                        <li class="divider"></li>
+                        <li><a class="text-center" href="#"><strong>所有訊息</strong>
+                            <i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-bell fa-fw"></i><i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li><a href="#">
+                            <div>
+                                <i class="fa fa-comment fa-fw"></i>新文章
+                                    <span class="pull-right text-muted small">4 分鐘前</span>
+                            </div>
+                        </a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">
+                            <div>
+                                <i class="fa fa-twitter fa-fw"></i>3 新跟隨者
+                                    <span class="pull-right text-muted small">12 分鐘前</span>
+                            </div>
+                        </a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">
+                            <div>
+                                <i class="fa fa-envelope fa-fw"></i>訊息傳送
+                                    <span class="pull-right text-muted small">4 分鐘前</span>
+                            </div>
+                        </a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">
+                            <div>
+                                <i class="fa fa-tasks fa-fw"></i>新工作
+                                    <span class="pull-right text-muted small">4 分鐘前</span>
+                            </div>
+                        </a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">
+                            <div>
+                                <i class="fa fa-upload fa-fw"></i>系統崩潰
+                                    <span class="pull-right text-muted small">4 分鐘前</span>
+                            </div>
+                        </a></li>
+                        <li class="divider"></li>
+                        <li><a class="text-center" href="#"><strong>所有警示</strong>
+                            <i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user fa-fw"></i><i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="Personal.aspx"><i class="fa fa-user fa-fw"></i>個人資訊</a>
+                        </li>
+                        <li><a href="Setting.aspx"><i class="fa fa-gear fa-fw"></i>設定</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="FirebaseAuth.aspx"><i class="fa fa-sign-out fa-fw"></i>登出
+                        </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                       <%-- <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="搜尋...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>--%>
+
+                        <li><a href="ManagerHomePage.aspx"><i class="glyphicon glyphicon-home fa-fw"></i>首頁</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-star-empty fa-fw"></i>人員管理<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="AdminPage.aspx">管理員</a>
+                                </li>
+                                <li>
+                                    <a href="UserPage.aspx">用戶</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li><a href="#"><i class="glyphicon glyphicon-comment fa-fw"></i>資料維護<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="FADBPage.aspx">食品添加物資料庫</a>
+                                </li>
+                                <li>
+                                    <a href="QuizBank.aspx">題庫</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li><a href="#"><i class="glyphicon glyphicon-stats fa-fw"></i>統計分析<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="Top.aspx">熱門查詢</a>
+                                </li>
+                                <li>
+                                    <a href="Favorite.aspx">最多人喜愛</a>
+                                </li>
+                                <li>
+                                    <a href="Default.aspx">最多人錯題</a>
+                                </li>
+                                <li>
+                                    <a href="LeaderBoard.aspx">經驗值排行</a>
+                                </li>
+                                <li>
+                                    <a href="Maps.aspx">位置分布</a>
+                                </li>
+                                <li>
+                                    <a href="TimePage.aspx">時間分布</a>
+                                </li>
+                                
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i>成就設定<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="RewardSetting.aspx">成就設定</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li><a href="#"><i class="glyphicon glyphicon-book fa-fw"></i>紀錄維護<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="GameREC.aspx">遊戲紀錄</a>
+                                </li>
+                                <li>
+                                    <a href="SearchREC.aspx">查詢紀錄</a>
+                                </li>
+                                <li>
+                                    <a href="FavoriteREC.aspx">我的最愛</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+
+                        <li><a href="#"><i class="glyphicon glyphicon-knight fa-fw"></i>訊息推播<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="Default.aspx">訊息設定</a>
+                                </li>
+                                <li>
+                                    <a href="Default.aspx">訊息清冊</a>
+                                </li>
+                                <li>
+                                    <a href="Default.aspx">推播紀錄</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+   
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+   
+</body>
+</html>
