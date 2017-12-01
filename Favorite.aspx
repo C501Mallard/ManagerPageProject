@@ -3,10 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
+    <div>
+        <h2><i class="col-lg-12"></i>&nbsp;最受注目</h2>
+        <hr />
+    </div>
     <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">最多人喜愛</h1>
-        </div>
         <!-- /.col-lg-12 -->
     </div>
 </asp:Content>

@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
      <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">成就設定</h1>
+            <h2>&nbsp;成就設定</h2>
         </div>
         <!-- /.col-lg-12 -->
     </div>
