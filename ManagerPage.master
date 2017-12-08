@@ -20,8 +20,11 @@
     <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
 
     <%--FirebaseUI 函式庫 (繁中在地化) 1061130--%>
-    <script src="https://www.gstatic.com/firebasejs/ui/2.5.1/firebase-ui-auth__zh_tw.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/2.5.1/firebase-ui-auth.css" />
+    <%--<script src="https://www.gstatic.com/firebasejs/ui/2.5.1/firebase-ui-auth__zh_tw.js"></script>--%>
+    <%--<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/2.5.1/firebase-ui-auth.css" />--%>
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
 
 
     <%--    <script>
@@ -63,7 +66,7 @@
         firebase.initializeApp(config);
     </script>
 
-    <script type="text/javascript">
+<%--    <script type="text/javascript">
         // FirebaseUI config.
         var uiConfig = {
             signInSuccessUrl: 'TermsOfService.aspx',
@@ -85,7 +88,7 @@
         var ui = new firebaseui.auth.AuthUI(firebase.auth());
         // The start method will wait until the DOM is loaded.
         ui.start('#firebaseui-auth-container', uiConfig);
-    </script>
+    </script>--%>
 
     <!-- Bootstrap Core CSS -->
     <%--<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />--%>
@@ -100,7 +103,9 @@
 
     <!-- Custom Fonts 傳說中的Font Awesome，我們的icon大部份都靠她了-->
     <%--<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />--%>
-    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <%--<link href="Content/font-awesome.min.css" rel="stylesheet" />--%>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -141,7 +146,9 @@
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
                 userLogin = user;
-                console.log("User is logined", user)
+                console.log("User is logined", user);
+                if (user.photoURL)
+                    document.getElementById("HeadPhoto").src = user.photoURL;
             } else {
                 userLogin = null;
                 console.log("User is not logined yet.");
@@ -149,6 +156,7 @@
             }
         });
     </script>
+
 
 </head>
 <body>
@@ -166,6 +174,7 @@
                 <!-- /.navbar-header -->
                 <ul class="nav navbar-top-links navbar-right" id="TitleBar">
                     <!-- /.dropdown -->
+
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user fa-fw"></i>&nbsp;<i class="fa fa-caret-down"></i></a>
                         <ul class="dropdown-menu" role="menu">
                             <%--                            <li><a href="Personal.aspx"><i class="fa fa-user fa-fw"></i>個人資訊</a>
@@ -179,6 +188,11 @@
                         </ul>
                         <!-- /.dropdown-user -->
                     </li>
+
+                    <li>
+                        <img src="Images/duck_whatsapp.png" id="HeadPhoto" class="img-circle" alt="Cinque Terre" height="42" width="42"></img>
+                    </li>
+
                     <!-- /.dropdown -->
                 </ul>
                 <!-- /.navbar-top-links -->

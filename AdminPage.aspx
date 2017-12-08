@@ -16,7 +16,7 @@
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
                 userLogin = user;
-                console.log("User is logined", user)
+                console.log("User is logined", user);
             } else {
                 userLogin = null;
                 console.log("User is not logined yet.");

@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>食品填加物查詢系統-管理後台</title>
+    <title>食品添加物查詢系統-管理後台</title>
 
     <style>
         body {
@@ -19,9 +19,27 @@
     </style>
 
     <link href="Content/animate.css" rel="stylesheet" />
-
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/FAQS.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <!-- The surrounding HTML is left untouched by FirebaseUI.
+         Your app may use that space for branding, controls and other customizations.-->
+        <%--<h1 class="text-center animated bounceInUp" style="animation-duration: 5s; animation-iteration-count: 1"><mark>「食品添加物查詢系統」</mark></h1>--%>
+        <%--<h1 class="text-center animated bounceInUp" style="animation-duration: 5s; animation-iteration-count: 1"><mark>管理後台</mark> </h1>--%>
+
+        <h1 class="text-center animated bounceInUp" style="animation-duration: 5s; animation-iteration-count: 1"><mark>「食品添加物查詢系統」管理後台</mark></h1>
+
+        <div id="firebaseui-auth-container"></div>
+
+        <%--<h3 id="loader" class="text-center">載入中...</h3>--%>
+
+        <h5 class="text-center text-info"><mark>C501 Team Mallard</mark></h5>
+    </form>
 
     <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
 
@@ -69,39 +87,14 @@
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
                 userLogin = user;
-                console.log("User is logined", user)
+                console.log("User is logined", user);
+
             } else {
                 userLogin = null;
                 console.log("User is not logined yet.");
             }
         });
     </script>
-
-</head>
-
-<body>
-    <form id="form1" runat="server">
-        <!-- The surrounding HTML is left untouched by FirebaseUI.
-         Your app may use that space for branding, controls and other customizations.-->
-        <h1 class="text-center animated bounceInUp" style="animation-duration: 5s;animation-iteration-count:1" ><mark>「食品添加物查詢系統」<br />
-            管理後台</mark></h1>
-        <div id="firebaseui-auth-container"></div>
-
-        <%--<h3 id="loader" class="text-center">載入中...</h3>--%>
-
-        <h5 class="text-center text-info" ><mark>C501 Team Mallard</mark></h5>
-    </form>
-
-
-
-
-
-    <%--Firebase 函式庫 1061130--%>
-    <%--<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>--%>
-
-    <%--FirebaseUI 函式庫 (繁中在地化) 1061130--%>
-    <%--<script src="https://www.gstatic.com/firebasejs/ui/2.5.1/firebase-ui-auth__zh_tw.js"></script>--%>
-    <%--<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/2.5.1/firebase-ui-auth.css" />--%>
 
 
 
