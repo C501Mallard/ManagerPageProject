@@ -1,12 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ManagerPage.master" AutoEventWireup="true" CodeFile="QuizBank.aspx.cs" Inherits="QuizBank" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ManagerPage.master" AutoEventWireup="true" CodeFile="Wrongwrong.aspx.cs" Inherits="GameREC" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
+
+    <div>
+        <h2>&nbsp;最多人錯題</h2>
+        <hr />
+    </div>
     <div class="row">
-        <div class="col-lg-12">
-            <h2>&nbsp;題庫</h2>
-        </div>
         <!-- /.col-lg-12 -->
     </div>
 

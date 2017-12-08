@@ -1,21 +1,34 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ManagerPage.master" AutoEventWireup="true" CodeFile="FavoriteREC.aspx.cs" Inherits="FavoriteREC" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
-     <div class="row">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
+    <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">我的最愛</h1>
+            <h2>&nbsp;我的最愛</h2>
         </div>
         <!-- /.col-lg-12 -->
     </div>
-    <div id="fb" style="width:500px;height:500px">
-
+    <div id="fb" style="width: 500px; height: 500px">
     </div>
 
 
-     <script src="Scripts/echarts.js"></script>
-     <script>
+    <script>
+        var userLogin;
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                userLogin = user;
+                console.log("User is logined", user)
+            } else {
+                userLogin = null;
+                console.log("User is not logined yet.");
+                window.location.replace("~/index.aspx");
+            }
+        });
+    </script>
+
+    <script src="Scripts/echarts.js"></script>
+    <script>
         var a = echarts.init(document.getElementById('fb'));
 
         option = {
@@ -103,5 +116,7 @@
 
         a.setOption(option);
     </script>
+
+
 </asp:Content>
 

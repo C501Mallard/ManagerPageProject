@@ -1,17 +1,29 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ManagerPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Favorite" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
     <div>
-    
+        <h2><i class="col-lg-12"></i>&nbsp;工事中</h2>
+        <hr />
     </div>
-    </form>
-</body>
-</html>
+    <div class="row">
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <script>
+        var userLogin;
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                userLogin = user;
+                console.log("User is logined", user)
+            } else {
+                userLogin = null;
+                console.log("User is not logined yet.");
+                window.location.replace("~/index.aspx");
+            }
+        });
+    </script>
+
+</asp:Content>
+

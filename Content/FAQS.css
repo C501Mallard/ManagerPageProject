@@ -1,0 +1,22 @@
+﻿/*Google fonts – cwTeXKai (Chinese Traditional) 楷體字型*/
+/*@import url(https://fonts.googleapis.com/earlyaccess/cwtexkai.css);*/
+
+/*Google fonts：cwTeXYen (Chinese Traditional) 圓體字型*/
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+
+/*Google fonts：cwTeXFangSong (Chinese Traditional) 仿宋體字型*/
+/*@import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);*/
+
+/*Google fonts：思源黑體*/
+/*@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);*/
+
+/*Google fonts – cwTeXMing (Chinese Traditional) 明體字型*/
+/*@import url(https://fonts.googleapis.com/earlyaccess/cwtexming.css);*/
+
+body {
+    /*font-family: 'cwTeXKai', serif;*/
+    font-family: 'cwTeXYen', sans-serif;
+    /*font-family: 'cwTeXFangSong',serif;*/
+    /*font-family: 'Noto Sans TC', sans-serif;*/
+    /*font-family: 'cwTeXMing', serif;*/
+}
