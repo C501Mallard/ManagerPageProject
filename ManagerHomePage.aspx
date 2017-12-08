@@ -11,14 +11,10 @@
         }
     </style>
 
-
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
 
-
     <div class="container">
-
 
         <div>
             <h2><i class="fa fa-home fa-fw"></i>&nbsp;首頁</h2>
@@ -37,13 +33,17 @@
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
                 userLogin = user;
-                console.log("User is logined", user)
+                console.log("User is logined", user);
+                //document.getElementById("HeadPhoto").src = user.photoURL;
             } else {
                 userLogin = null;
                 console.log("User is not logined yet.");
                 window.location.replace("~/index.aspx");
             }
         });
+
+        //alert(document.getElementById("HeadPhoto").src);
+
     </script>
 
 </asp:Content>

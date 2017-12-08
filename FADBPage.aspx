@@ -1,19 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ManagerPage.master" AutoEventWireup="true" CodeFile="FADBPage.aspx.cs" Inherits="FADBPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <script>
-        var userLogin;
-        firebase.auth().onAuthStateChanged(function (user) {
-            if (user) {
-                userLogin = user;
-                console.log("User is logined", user)
-            } else {
-                userLogin = null;
-                console.log("User is not logined yet.");
-                window.location.replace("index.aspx");
-            }
-        });
-    </script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
@@ -30,7 +17,7 @@
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
                 userLogin = user;
-                console.log("User is logined", user)
+                console.log("User is logined", user);
             } else {
                 userLogin = null;
                 console.log("User is not logined yet.");
