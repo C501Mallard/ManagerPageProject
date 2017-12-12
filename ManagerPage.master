@@ -66,7 +66,7 @@
         firebase.initializeApp(config);
     </script>
 
-<%--    <script type="text/javascript">
+    <%--    <script type="text/javascript">
         // FirebaseUI config.
         var uiConfig = {
             signInSuccessUrl: 'TermsOfService.aspx',
@@ -160,7 +160,7 @@
 
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div id="wrapper">
             <!-- Navigation -->
             <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0" id="navbar-head">
@@ -226,10 +226,13 @@
                             <li><a href="#"><i class="fa fa-database fa-fw"></i>&nbsp;資料維護<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="FADBPage.aspx">食品添加物資料庫</a>
+                                        <a href="DB_FA_Class.aspx">食品添加物類別</a>
                                     </li>
                                     <li>
-                                        <a href="QuizBank.aspx">題庫</a>
+                                        <a href="DB_ClassingFA.aspx">分類食品添加物</a>
+                                    </li>
+                                    <li>
+                                        <a href="DB_QuizBank.aspx">題庫</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->
