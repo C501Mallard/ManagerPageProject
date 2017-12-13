@@ -10,110 +10,41 @@
             font-size: xx-large;
         }
     </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">首頁</h1>
+
+    <div class="container">
+
+        <div>
+            <h2><i class="fa fa-home fa-fw"></i>&nbsp;首頁</h2>
+            <hr />
         </div>
-        <!-- /.col-lg-12 -->
+
+        <!-- The surrounding HTML is left untouched by FirebaseUI.
+         Your app may use that space for branding, controls and other customizations.-->
+        <h3>放入幾個統計圖表及重要排名條目</h3>
+
+        <%--<div id="firebaseui-auth-container"></div>--%>
     </div>
-    <%--<form id="form1" runat="server">
-        <!-- /.row -->
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <i id="glyimage" class="glyphicon glyphicon-book"></i>
-                            </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="hang"></div>
-                           
-                            </div>
-                        </div>
-                    </div>
-                    <a href="Default.aspx">
-                        <div class="panel-footer">
-                            <span class="pull-left" href="SearchFA.aspx">查詢</span>
-                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="panel panel-green">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <i id="glyimage" class="glyphicon glyphicon-knight"></i>
-                            </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="hang"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="Default.aspx">
-                        <div class="panel-footer">
-                            <span class="pull-left" href="PlayGame.aspx">遊戲</span>
-                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="panel panel-yellow">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <i id="glyimage" class="glyphicon glyphicon-star-empty"></i>
-                            </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="hang"></div>
-                              
-                            </div>
-                        </div>
-                    </div>
-                    <a href="Default.aspx">
-                        <div class="panel-footer">
-                            <span class="pull-left">我的最愛</span>
-                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="panel panel-red">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <i id="glyimage" class="glyphicon glyphicon-comment"></i>
-                            </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="hang">13</div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <a href="Default.aspx">
-                        <div class="panel-footer">
-                            <span class="pull-left" href="PlayGame.aspx">推播</span>
-                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
 
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </form>--%>
+    <script>
+        var userLogin;
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                userLogin = user;
+                console.log("User is logined", user);
+                //document.getElementById("HeadPhoto").src = user.photoURL;
+            } else {
+                userLogin = null;
+                console.log("User is not logined yet.");
+                window.location.replace("~/index.aspx");
+            }
+        });
 
+        //alert(document.getElementById("HeadPhoto").src);
 
-
+    </script>
 
 </asp:Content>
 

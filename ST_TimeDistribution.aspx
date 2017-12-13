@@ -1,13 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ManagerPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Favorite" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ManagerPage.master" AutoEventWireup="true" CodeFile="ST_TimeDistribution.aspx.cs" Inherits="TimePage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
-    <div>
-        <h2><i class="col-lg-12"></i>&nbsp;工事中</h2>
-        <hr />
-    </div>
     <div class="row">
+        <div class="col-lg-12">
+            <h2>&nbsp;時間分布</h2>
+        </div>
         <!-- /.col-lg-12 -->
     </div>
 
