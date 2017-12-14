@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
-    <script>
+<%--    <script>
         var userLogin;
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
@@ -12,10 +12,10 @@
             } else {
                 userLogin = null;
                 console.log("User is not logined yet.");
-                window.location.replace("~/index.aspx");
+                window.location.replace("index.aspx");
             }
         });
-    </script>
+    </script>--%>
 
     <div class="row">
         <div class="col-lg-12">

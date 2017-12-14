@@ -268,7 +268,7 @@
             } else {
                 userLogin = null;
                 console.log("User is not logined yet.");
-                window.location.replace("~/index.aspx");
+                window.location.replace("index.aspx");
             }
         });
     </script>

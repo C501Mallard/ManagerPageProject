@@ -11,17 +11,17 @@
     </div>
 
     <script>
-        var userLogin;
-        firebase.auth().onAuthStateChanged(function (user) {
-            if (user) {
-                userLogin = user;
-                console.log("User is logined", user);
-            } else {
-                userLogin = null;
-                console.log("User is not logined yet.");
-                window.location.replace("~/index.aspx");
-            }
-        });
+        //var userLogin;
+        //firebase.auth().onAuthStateChanged(function (user) {
+        //    if (user) {
+        //        userLogin = user;
+        //        console.log("User is logined", user);
+        //    } else {
+        //        userLogin = null;
+        //        console.log("User is not logined yet.");
+        //        window.location.replace("index.aspx");
+        //    }
+        //});
     </script>
     <form runat="server">
         <asp:sqldatasource id = "sdsPN_Records" runat="server" ConnectionString="<%$ ConnectionStrings:WY-FADBConnectionString %>" SelectCommand="SELECT PushNotification.PN_ID, PushNotification.GroupID, User_Group.GroupName, PushNotification.PN_Title, PushNotification.PN_Content, PushNotification.PN_DateTime FROM PushNotification INNER JOIN User_Group ON PushNotification.GroupID = User_Group.GroupID ORDER BY PushNotification.PN_ID"></asp:sqldatasource>

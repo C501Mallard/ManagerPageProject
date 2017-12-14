@@ -10,7 +10,7 @@
         <!-- /.col-lg-12 -->
     </div>
 
-    <script>
+<%--    <script>
         var userLogin;
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
@@ -19,10 +19,10 @@
             } else {
                 userLogin = null;
                 console.log("User is not logined yet.");
-                window.location.replace("~/index.aspx");
+                window.location.replace("index.aspx");
             }
         });
-    </script>
+    </script>--%>
 
     <form runat="server">
         <asp:sqldatasource id="sdsAdmins" runat="server" connectionstring="<%$ ConnectionStrings:WY-FADBConnectionString %>" deletecommand="DELETE FROM [Users] WHERE [UID] = @UID" insertcommand="INSERT INTO [Users] ([UID], [AccountName], [Auth_Way], [Token], [Gender], [Weight], [Birthday], [JoinDate], [AdminGroup]) VALUES (@UID, @AccountName, @Auth_Way, @Token, @Gender, @Weight, @Birthday, @JoinDate, @AdminGroup)" selectcommand="SELECT * FROM [Users] WHERE ([AdminGroup] = @AdminGroup and [Enabled] = @Enabled) ORDER BY [AccountName]" updatecommand="UPDATE [Users] SET [AccountName] = @AccountName, [Auth_Way] = @Auth_Way, [Token] = @Token, [Gender] = @Gender, [Weight] = @Weight, [Birthday] = @Birthday, [JoinDate] = @JoinDate, [AdminGroup] = @AdminGroup WHERE [UID] = @UID">

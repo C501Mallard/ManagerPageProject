@@ -218,7 +218,7 @@
                             </ul>--%>
                                 <!-- /.nav-second-level -->
                             </li>
-                            <li><a href="#"><i class="fa fa-book fa-fw"></i>&nbsp;紀錄維護<span class="fa arrow"></span></a>
+                            <li><a href="#"><i class="fa fa-book fa-fw"></i>&nbsp;各項紀錄<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
                                         <a href="RM_GameREC.aspx">遊戲紀錄</a>
@@ -236,7 +236,7 @@
                             <li><a href="PushNotifications.aspx"><i class="fa fa-paper-plane fa-fw"></i>&nbsp;訊息推播<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="PN_PushNotifi">訊息推播</a>
+                                        <a href="PN_PushNotifi.aspx">訊息推播</a>
                                     </li>
                                     <li>
                                         <a href="PN_Records.aspx">推播紀錄</a>

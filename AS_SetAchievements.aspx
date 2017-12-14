@@ -10,7 +10,7 @@
         <!-- /.col-lg-12 -->
     </div>
 
-    <script>
+<%--    <script>
         var userLogin;
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
@@ -19,10 +19,10 @@
             } else {
                 userLogin = null;
                 console.log("User is not logined yet.");
-                window.location.replace("~/index.aspx");
+                window.location.replace("index.aspx");
             }
         });
-    </script>
+    </script>--%>
 
 </asp:Content>
 
