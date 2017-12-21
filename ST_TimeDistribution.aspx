@@ -1,49 +1,34 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ManagerPage.master" AutoEventWireup="true" CodeFile="ManagerHomePage.aspx.cs" Inherits="ManagerHomePage" %>
-
-<%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ManagerPage.master" AutoEventWireup="true" CodeFile="ST_TimeDistribution.aspx.cs" Inherits="TimePage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <style>
-        #glyimage {
-            font-size: 50px;
-        }
-
-        .hang {
-            font-size: xx-large;
-        }
-    </style>
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
-
-
-
-    <div>
-        <h2><i class="fa fa-home fa-fw"></i>&nbsp;首頁</h2>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>&nbsp;時間分布</h2>
+        </div>
+        <!-- /.col-lg-12 -->
     </div>
 
-    <%--    <script>
+<%--    <script>
         var userLogin;
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
                 userLogin = user;
                 console.log("User is logined", user);
-                //document.getElementById("HeadPhoto").src = user.photoURL;
             } else {
                 userLogin = null;
                 console.log("User is not logined yet.");
                 window.location.replace("index.aspx");
             }
         });
-
-        //alert(document.getElementById("HeadPhoto").src);
-
     </script>--%>
+
     <form runat="server">
         <div class="container">
-            <div class="row">
+            <%--<div class="row">--%>
                 <asp:SqlDataSource ID="sdsHitsDistribution" runat="server" ConnectionString="<%$ ConnectionStrings:WY-FADBConnectionString %>" SelectCommand="SELECT COUNT(LFA_ID) AS Hits, YEAR(LFA_DateTime) AS Year, MONTH(LFA_DateTime) AS Month, CONVERT (varchar, YEAR(LFA_DateTime)) + '/' + CONVERT (varchar, MONTH(LFA_DateTime)) AS YearMonth FROM LookupFA GROUP BY YEAR(LFA_DateTime), MONTH(LFA_DateTime) ORDER BY Year, Month"></asp:SqlDataSource>
-                <asp:Chart ID="chHitsDistribution" runat="server" class="col-lg-4" DataSourceID="sdsHitsDistribution">
+                <asp:Chart ID="chHitsDistribution" runat="server"  DataSourceID="sdsHitsDistribution" Width="600px">
                     <Series>
                         <asp:Series Name="Series1" XValueMember="YearMonth" YValueMembers="Hits" XValueType="String" YValueType="Int32"></asp:Series>
                     </Series>
@@ -60,7 +45,7 @@
  FROM Users GROUP BY YEAR(JoinDate), MONTH(JoinDate) ORDER BY Year, Month
 
 "></asp:SqlDataSource>
-                <asp:Chart ID="chNewUsersPerMonth" runat="server" class="col-lg-4" DataSourceID="sdsNewUsersPerMonth">
+                <asp:Chart ID="chNewUsersPerMonth" runat="server"  DataSourceID="sdsNewUsersPerMonth" Width="598px">
                     <Series>
                         <asp:Series Name="Series1" XValueMember="YearMonth" YValueMembers="NewUsers" XValueType="String" YValueType="Int32"></asp:Series>
                     </Series>
@@ -72,10 +57,9 @@
                         </asp:Title>
                     </Titles>
                 </asp:Chart>
-            </div>
+            <%--</div>--%>
         </div>
     </form>
-
 
 </asp:Content>
 
