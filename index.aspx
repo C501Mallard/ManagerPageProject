@@ -6,21 +6,21 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>食品添加物查詢系統-管理後台</title>
+    <title>來查添加物-管理後台</title>
 
     <style>
         body {
             margin: 0;
             padding: 0;
             /*background: #000 url(Images/cinnamon-stars-2991174_1920.jpg) center center fixed no-repeat;*/
-            background: #000 url(Images/ducks_headinwater.jpg) center center fixed no-repeat;
+            background: #000 url(Images/cherry-tomatoes-2566458_1920.jpg) center center fixed no-repeat;
             background-size: cover;
         }
     </style>
 
     <link href="Content/animate.css" rel="stylesheet" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/FAQS.css" rel="stylesheet" />
+    <%--<link href="Content/FAQS.css" rel="stylesheet" />--%>
 
 
 </head>
@@ -67,7 +67,7 @@
                 // Leave the lines as is for the providers you want to offer your users.
                 firebase.auth.GoogleAuthProvider.PROVIDER_ID,
                 //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-                firebase.auth.EmailAuthProvider.PROVIDER_ID
+                //firebase.auth.EmailAuthProvider.PROVIDER_ID
             ],
             // Terms of service url.
             tosUrl: 'https://www.google.com'

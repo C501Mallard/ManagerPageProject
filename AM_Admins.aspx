@@ -70,7 +70,7 @@
                 <asp:BoundField DataField="Auth_Way" HeaderText="認證方式" SortExpression="Auth_Way">
                                 <HeaderStyle Wrap="False" /> <ItemStyle CssClass="fixedwidth" Height="10em" Width="14em"></ItemStyle>
                 </asp:BoundField>
-                <asp:BoundField DataField="Token" HeaderText="Token" SortExpression="Token">
+                <asp:BoundField DataField="Token" HeaderText="IID" SortExpression="Token">
                                 <HeaderStyle Wrap="False" /> <ItemStyle CssClass="fixedwidth" Height="10em" Width="14em"></ItemStyle>
                 </asp:BoundField>
                 <asp:BoundField DataField="Gender" HeaderText="性別" SortExpression="Gender">

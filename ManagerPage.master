@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>「查添加」管理介面</title>
+    <title>「來查添加物」管理後台</title>
 
     <%--Firebase 函式庫 1061213--%>
     <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
@@ -116,7 +116,7 @@
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand BigTitle" href="ManagerHomePage.aspx" style="color: greenyellow;"><i class="fa fa-cogs  fa-fw"></i>&nbsp;食品添加物查詢管理介面</a>
+                    <a class="navbar-brand BigTitle" href="ManagerHomePage.aspx" style="color: greenyellow;"><i class="fa fa-cogs  fa-fw"></i>&nbsp;「來查添加物」網站後台</a>
                 </div>
                 <!-- /.navbar-header -->
                 <ul class="nav navbar-top-links navbar-right" id="TitleBar">
@@ -124,8 +124,8 @@
 
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user fa-fw"></i>&nbsp;<i class="fa fa-caret-down"></i></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="SE_PersonalInfo.aspx"><i class="fa fa-user fa-fw"></i>個人資訊</a>
-                            </li>
+<%--                            <li><a href="SE_PersonalInfo.aspx"><i class="fa fa-user fa-fw"></i>個人資訊</a>
+                            </li>--%>
 <%--                            <li><a href="Setting.aspx"><i class="fa fa-gear fa-fw"></i>設定</a>
                             </li>--%>
                             <li class="divider"></li>

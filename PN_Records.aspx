@@ -27,12 +27,12 @@
         <asp:sqldatasource id = "sdsPN_Records" runat="server" ConnectionString="<%$ ConnectionStrings:WY-FADBConnectionString %>" SelectCommand="SELECT PushNotification.PN_ID, PushNotification.GroupID, User_Group.GroupName, PushNotification.PN_Title, PushNotification.PN_Content, PushNotification.PN_DateTime FROM PushNotification INNER JOIN User_Group ON PushNotification.GroupID = User_Group.GroupID ORDER BY PushNotification.PN_ID"></asp:sqldatasource>
         <asp:gridview id="gvPN_Records" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="PN_ID" DataSourceID="sdsPN_Records">
             <Columns>
-                <asp:BoundField DataField="PN_ID" HeaderText="PN_ID" ReadOnly="True" SortExpression="PN_ID" />
-                <asp:BoundField DataField="GroupID" HeaderText="GroupID" SortExpression="GroupID" />
-                <asp:BoundField DataField="GroupName" HeaderText="GroupName" SortExpression="GroupName" />
-                <asp:BoundField DataField="PN_Title" HeaderText="PN_Title" SortExpression="PN_Title" />
-                <asp:BoundField DataField="PN_Content" HeaderText="PN_Content" SortExpression="PN_Content" />
-                <asp:BoundField DataField="PN_DateTime" HeaderText="PN_DateTime" SortExpression="PN_DateTime" />
+                <asp:BoundField DataField="PN_ID" HeaderText="推播序號" ReadOnly="True" SortExpression="PN_ID" />
+                <asp:BoundField DataField="GroupID" HeaderText="群組編號" SortExpression="GroupID" />
+                <asp:BoundField DataField="GroupName" HeaderText="群組名稱" SortExpression="GroupName" />
+                <asp:BoundField DataField="PN_Title" HeaderText="主題" SortExpression="PN_Title" />
+                <asp:BoundField DataField="PN_Content" HeaderText="內容" SortExpression="PN_Content" />
+                <asp:BoundField DataField="PN_DateTime" HeaderText="推播日時" SortExpression="PN_DateTime" />
             </Columns>
         </asp:gridview>
     </form>

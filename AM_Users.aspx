@@ -64,23 +64,23 @@
                 </asp:CommandField>
                 <asp:BoundField DataField="UID" HeaderText="UID" ReadOnly="True" SortExpression="UID">
                 </asp:BoundField>
-                <asp:BoundField DataField="AccountName" HeaderText="AccountName" SortExpression="AccountName">
+                <asp:BoundField DataField="AccountName" HeaderText="帳號名稱" SortExpression="AccountName">
                 </asp:BoundField>
-                <asp:BoundField DataField="Auth_Way" HeaderText="Auth_Way" SortExpression="Auth_Way">
+                <asp:BoundField DataField="Auth_Way" HeaderText="認證方式" SortExpression="Auth_Way">
                 </asp:BoundField>
-                <asp:BoundField DataField="Token" HeaderText="Token" SortExpression="Token">
+                <asp:BoundField DataField="Token" HeaderText="IID" SortExpression="Token">
                 </asp:BoundField>
-                <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender">
+                <asp:BoundField DataField="Gender" HeaderText="性別" SortExpression="Gender">
                 </asp:BoundField>
-                <asp:BoundField DataField="Weight" HeaderText="Weight" SortExpression="Weight">
+                <asp:BoundField DataField="Weight" HeaderText="體重" SortExpression="Weight">
                 </asp:BoundField>
-                <asp:BoundField DataField="Birthday" HeaderText="Birthday" SortExpression="Birthday">
+                <asp:BoundField DataField="Birthday" HeaderText="生日" SortExpression="Birthday">
                 </asp:BoundField>
-                <asp:BoundField DataField="JoinDate" HeaderText="JoinDate" SortExpression="JoinDate">
+                <asp:BoundField DataField="JoinDate" HeaderText="加入日" SortExpression="JoinDate">
                 </asp:BoundField>
-                <asp:BoundField DataField="AdminGroup" HeaderText="AdminGroup" SortExpression="AdminGroup">
+                <asp:BoundField DataField="AdminGroup" HeaderText="管理者" SortExpression="AdminGroup">
                 </asp:BoundField>
-                <asp:BoundField DataField="Enabled" HeaderText="Enabled" SortExpression="Enabled">
+                <asp:BoundField DataField="Enabled" HeaderText="啟用" SortExpression="Enabled">
                 </asp:BoundField>
             </Columns>
             <FooterStyle BackColor="White" ForeColor="#000066" />
