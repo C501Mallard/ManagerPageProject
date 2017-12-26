@@ -209,15 +209,15 @@
                                 </ul>
                                 <!-- /.nav-second-level -->
                             </li>
-                            <li>
-                                <a href="AS_SetAchievements.aspx"><i class="fa fa-trophy fa-fw"></i>&nbsp;成就設定</a>
+                            <%--<li>--%>
+                                <%--<a href="AS_SetAchievements.aspx"><i class="fa fa-trophy fa-fw"></i>&nbsp;成就設定</a>--%>
                                 <%--                            <ul class="nav nav-second-level">
                                 <li>
                                     <a href="RewardSetting.aspx">成就設定</a>
                                 </li>
                             </ul>--%>
                                 <!-- /.nav-second-level -->
-                            </li>
+                            <%--</li>--%>
                             <li><a href="#"><i class="fa fa-book fa-fw"></i>&nbsp;各項紀錄<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>

@@ -137,46 +137,46 @@
             });
 
 
-            $(document).ready(function () {
-                $("#Post").click(function () {
-                    var json = {
-                        //標的IID
-                        "to": "ewXkxWxP_ig:APA91bEglMx1i8PLByfdyDPLarqBsOOXQXXRod4y3vO5WnhfO0tIiOy_6OAamDOg3fQGedxavOvceyawZKgA6XpVznxRk9ggu6BVZ2I7uuWXKIzJZXXHghwhL3FjNdlVc3BeCHg_LyuX",
+            //$(document).ready(function () {
+            //    $("#Post").click(function () {
+            //        var json = {
+            //            //標的IID
+            //            "to": "ewXkxWxP_ig:APA91bEglMx1i8PLByfdyDPLarqBsOOXQXXRod4y3vO5WnhfO0tIiOy_6OAamDOg3fQGedxavOvceyawZKgA6XpVznxRk9ggu6BVZ2I7uuWXKIzJZXXHghwhL3FjNdlVc3BeCHg_LyuX",
 
-                        //推播內容
-                        "notification": {
-                            "title": "食品添加物查詢系統呦",                           //主旨
-                            "body": "推播測試",                                        //內容
-                            "icon": "firebase-logo.png",                               //推播訊息的圖示
-                            "click_action": "https://rookiefcm-2c5d0.firebaseapp.com"  //按下推播圖示後，要連向哪個網址
-                        }
-                    };
+            //            //推播內容
+            //            "notification": {
+            //                "title": "食品添加物查詢系統呦",                           //主旨
+            //                "body": "推播測試",                                        //內容
+            //                "icon": "firebase-logo.png",                               //推播訊息的圖示
+            //                "click_action": "https://rookiefcm-2c5d0.firebaseapp.com"  //按下推播圖示後，要連向哪個網址
+            //            }
+            //        };
 
-                    json.to = "ewXkxWxP_ig:APA91bEglMx1i8PLByfdyDPLarqBsOOXQXXRod4y3vO5WnhfO0tIiOy_6OAamDOg3fQGedxavOvceyawZKgA6XpVznxRk9ggu6BVZ2I7uuWXKIzJZXXHghwhL3FjNdlVc3BeCHg_LyuX";
-                    json.notification.title = $("#inputTitle").val();
-                    json.notification.body = $("#inputBody").val();
-                    json.notification.icon = $("#inputIcon").val();
-                    json.notification.click_action = $("#inputClickAction").val();
+            //        json.to = "ewXkxWxP_ig:APA91bEglMx1i8PLByfdyDPLarqBsOOXQXXRod4y3vO5WnhfO0tIiOy_6OAamDOg3fQGedxavOvceyawZKgA6XpVznxRk9ggu6BVZ2I7uuWXKIzJZXXHghwhL3FjNdlVc3BeCHg_LyuX";
+            //        json.notification.title = $("#inputTitle").val();
+            //        json.notification.body = $("#inputBody").val();
+            //        json.notification.icon = $("#inputIcon").val();
+            //        json.notification.click_action = $("#inputClickAction").val();
 
-                    //JQuery的Http Post request，底下除了在建新的Firebase專案時須更改Authorization的key以外，其他不用改。
-                    $.ajax({
-                        url: 'https://fcm.googleapis.com/fcm/send',
-                        type: "POST",
-                        processData: false,
-                        beforeSend: function (xhr) {
-                            xhr.setRequestHeader('Content-Type', 'application/json');
-                            xhr.setRequestHeader('Authorization', 'key=AAAAqdPVG7A:APA91bEOk3rg2jh1L0Ch9VqLlzOMWTRmAYS8qY4zj2o31QPzuGlRYpNZUDhHLxuFzXkMMth3ZLZJOMqWXiXRrkVA6kyFXawecmGZ4BIEC74TBMRzWSLglhXMTgXcp-qUdng81NpCaaMJ');
-                        },
-                        data: JSON.stringify(json),
-                        success: function () {
-                            console.log("傳送成功");
-                        },
-                        error: function (error) {
-                            console.log(error);
-                        }
-                    });
-                });
-            });
+            //        //JQuery的Http Post request，底下除了在建新的Firebase專案時須更改Authorization的key以外，其他不用改。
+            //        $.ajax({
+            //            url: 'https://fcm.googleapis.com/fcm/send',
+            //            type: "POST",
+            //            processData: false,
+            //            beforeSend: function (xhr) {
+            //                xhr.setRequestHeader('Content-Type', 'application/json');
+            //                xhr.setRequestHeader('Authorization', 'key=AAAAqdPVG7A:APA91bEOk3rg2jh1L0Ch9VqLlzOMWTRmAYS8qY4zj2o31QPzuGlRYpNZUDhHLxuFzXkMMth3ZLZJOMqWXiXRrkVA6kyFXawecmGZ4BIEC74TBMRzWSLglhXMTgXcp-qUdng81NpCaaMJ');
+            //            },
+            //            data: JSON.stringify(json),
+            //            success: function () {
+            //                console.log("傳送成功");
+            //            },
+            //            error: function (error) {
+            //                console.log(error);
+            //            }
+            //        });
+            //    });
+            //});
 
             // Retrieve Firebase Messaging object.
 
@@ -255,16 +255,16 @@
 
     <hr />
 
-    <h3><i class="col-lg-12"></i>&nbsp;以下測試用</h3>
+    <%--<h3><i class="col-lg-12"></i>&nbsp;以下測試用</h3>--%>
     <%--以下測試用--%>
-    <div>
+<%--    <div>
         <button id="PostC501PC" type="button" class="btn btn-primary">推播至我的C501 PC</button><br />
         <br />
         <button id="PostS7Edge" type="button" class="btn btn-success">推播至我的Samsung S7 edge</button><br />
         <br />
         <button id="PostHomePC" type="button" class="btn btn-success">推播至我家PC</button><br />
         
-    </div>
+    </div>--%>
 
     <!--以下都是測試用-->
     <%--    <button id="console">Console</button><br />
